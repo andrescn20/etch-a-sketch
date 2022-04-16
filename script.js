@@ -1,11 +1,22 @@
 const mainContainer = document.querySelector ('.mainContainer');
 const controls = document.querySelector ('.controls');
-let a = 16; 
+const array = []; 
 
-function createHorizontals(a){
-    for ( i = 0 ; i < a ; i ++){
-        const horizontal = document.createElement ('div');
-        horizontal.setAttribute('class' , 'horizontal');
-        mainContainer.appendChild(horizontal);
+let containerSide = 768;
+let squareSide = 0; 
+function createSquares(a){
+    total = a*a;
+    for ( i = 0 ; i < total ; i ++){
+        const square = document.createElement ('div');
+        square.setAttribute('class' , 'square');
+        square.style.height = calculateDimension(a);
+        square.style.width = calculateDimension(a);
+        mainContainer.appendChild(square);
+    
     }
+}
+
+function calculateDimension(a){
+    squareSide = (containerSide/a)-2;
+    return squareSide+'px';
 }
