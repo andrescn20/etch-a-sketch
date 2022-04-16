@@ -1,17 +1,17 @@
 html {
     min-height: 100%; 
-
     display: flex;
     flex-direction: column;
 }
 
 body {
     flex-grow: 1;
-    border: 3px solid rgb(12, 30, 44); 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    background-image: url(/Background-blues-white.jpg);
+    background-size: cover;
 }   
 
 
@@ -21,7 +21,11 @@ body {
     display: flex;  
     border: 3px solid rgb(17, 136, 233); 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0; 
+    padding: 0; 
+    background-color: white;
 }
 
 .controls{
@@ -30,8 +34,10 @@ body {
     width: 250px; 
 }
 
-
-.horizontal{
-     border: 2px solid green;
-     flex-grow: 1;
+.square{
+    /*border: 2px solid green;*/
+    flex-grow: 0 0 auto; 
+    margin:0px; 
+    background-color: white; 
+    border: 1px solid gray;
 }
