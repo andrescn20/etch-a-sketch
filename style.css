@@ -20,7 +20,6 @@ body {
     height: 768px; 
     width: 768px;
     display: flex;  
-    border: 3px solid rgb(17, 136, 233); 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -30,9 +29,9 @@ body {
 }
 
 .controls{
-    border: 3px solid rgb(136, 18, 18);
     height: 768px;
     width: 250px; 
+    margin-right:  50px;
 }
 
 .square{
@@ -52,4 +51,65 @@ body {
 
 .color { 
     background-color: #0060ff;
+}
+
+.controls {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+button {
+  background-image: linear-gradient(-180deg, #2f95c0 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border: 3px solid whitesmoke
+}
+
+button:hover{
+  border: 3px solid black;
+
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 1rem 2rem;
+  }
+}
+input {
+    background: #17759C;
+    border: 3px solid whitesmoke;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5em;
+    transition: padding 0.3s 0.2s ease;
+    width: 240px
+}
+input:hover {
+      background: whitesmoke;
+      border: 3px solid #17759C;
+      color: #17759C;
+    }
+
+.colorBtn{
+    background: black;
+    color: white;
+}
+.colorful {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    color: black;
+    font-weight: bold;
 }

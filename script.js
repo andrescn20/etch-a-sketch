@@ -3,17 +3,26 @@ const controls = document.querySelector ('.controls');
 const array = []; 
 const generatorBtn = document.getElementById ('generatorBtn');
 const sizeInput = document.getElementById ('size');
-/*const resetBtn = documen.getElementById ('resetBtn');*/
-
+const colorBtn = document.querySelector('.colorBtn');
 
 let containerSide = 768;
 let squareSide = 0; 
 let gridStatus= false; 
 let lastSize = 0; 
 let currentSize = 0;
-let black = false; 
+let black = true; 
 
 generatorBtn.onclick = mainFunction; 
+colorBtn.onclick = () => {
+    switch (black){
+        case true: black = false; 
+            colorBtn.classList.toggle('colorful');
+            break; 
+        case false: black = true; 
+            colorBtn.classList.toggle('colorful');
+                    break;
+    }
+}
 
 
 function mainFunction (){
@@ -36,8 +45,13 @@ function generator(gridSide){
 
 }
 function calculateDimension(gridSide){
-    squareSide = (containerSide/gridSide)-2;
-    return squareSide+'px';
+    switch(border){
+        case (true): squareSide = (containerSide/gridSide)-2;
+                     return squareSide+'px';
+        case(false): squareSide = (containerSide/gridSide);
+                     return squareSide+'px';
+    }
+
 }
 function eraseSquares(gridSide) {
 
@@ -76,6 +90,7 @@ function changeColor(e) {
 
         case true: 
             e.target.style.background = 'black';
+            break;
         
         case false: 
             let randomColor = Math.floor(Math.random()*16777215).toString(16);

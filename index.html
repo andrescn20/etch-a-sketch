@@ -12,11 +12,22 @@
 <body>
     <div class = 'controls'>
         
-        <input id = 'size'> </input>
+        <input id = 'size' placeholder="'64'"> </input>
         <button id = 'generatorBtn'> Generate </button>
-        <button id = 'colorBtn' > Color Theme </button>
-        <button id = 'borderBtn'> Border </button>
-        <button id = 'resetBtn' > Reset </button>
+        <button class = 'colorBtn' > Color Theme </button>
+        <button class = 'borderBtn'> Border </button>
+        <div class = 'instructions'> 
+            <h3>Instructions</h3>
+            <list clas="steps">
+                <ol>Enter a number (max = 100).</ol>
+                <ol>Press 'Generate'.</ol>
+                <ol>Pass the mouse over the grid</ol>
+            </list>
+            <P>Press 'Generate' again to clear the grid or
+                 enter a new number to generate a new grid.</P>
+            <h4 class="color">Color Theme: Toggles between colorful and black. </h4>     
+            <h4 class ='border'>Border: Toggles the borders between squares</h4>
+        </div>
 
     </div>
 
