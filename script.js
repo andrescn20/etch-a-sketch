@@ -24,6 +24,7 @@ colorBtn.onclick = () => {
     }
 }
 
+window.onload = generator(64);
 
 function mainFunction (){
 currentSize = sizeInput.value; 
@@ -33,25 +34,17 @@ generator (currentSize);
 function generator(gridSide){
     
     if (gridStatus === false){
-
         createSquares(gridSide);
-
     }else {
-
-    eraseSquares(lastSize);
-    createSquares(gridSide);
+        eraseSquares(lastSize);
+        createSquares(gridSide);
     }
 
 
 }
 function calculateDimension(gridSide){
-    switch(border){
-        case (true): squareSide = (containerSide/gridSide)-2;
+      squareSide = (containerSide/gridSide)-2;
                      return squareSide+'px';
-        case(false): squareSide = (containerSide/gridSide);
-                     return squareSide+'px';
-    }
-
 }
 function eraseSquares(gridSide) {
 
@@ -95,6 +88,10 @@ function changeColor(e) {
         case false: 
             let randomColor = Math.floor(Math.random()*16777215).toString(16);
             e.target.style.background = "#" + randomColor;
+            break;
+        default:
+            e.target.style.background = 'white';
+            
     }
 }
 
