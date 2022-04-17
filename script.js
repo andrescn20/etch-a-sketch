@@ -12,6 +12,10 @@ let lastSize = 0;
 let currentSize = 0;
 let black = true; 
 
+
+window.onload = generator(64);
+
+
 generatorBtn.onclick = mainFunction; 
 colorBtn.onclick = () => {
     switch (black){
@@ -24,12 +28,18 @@ colorBtn.onclick = () => {
     }
 }
 
-window.onload = generator(64);
-
 function mainFunction (){
-currentSize = sizeInput.value; 
-generator (currentSize);
+    let input = sizeInput.value;
+    currentSize = parseInt(input, 10);
 
+    if ( Number.isNaN(currentSize)) {
+        alert('Invalid input. Please enter a number');
+    } else if (Math.abs(currentSize) > 100){
+        alert('Invalid input. Max input is 100');
+    }else {
+        currentSize = Math.abs(currentSize);
+        generator (currentSize);
+    }
 }
 function generator(gridSide){
     
