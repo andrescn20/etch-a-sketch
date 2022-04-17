@@ -12,6 +12,7 @@ body {
     flex-direction: row;
     background-image: url(/Background-blues-white.jpg);
     background-size: cover;
+    flex-shrink: 0;
 }   
 
 
@@ -35,9 +36,20 @@ body {
 }
 
 .square{
-    /*border: 2px solid green;*/
+    border: 1px solid gray;
     flex-grow: 0 0 auto; 
     margin:0px; 
     background-color: white; 
+
+}
+.squareBlack{ 
+    background-color: black;
+}
+.border{
     border: 1px solid gray;
+    background-color: #0060ff;
+}
+
+.color { 
+    background-color: #0060ff;
 }
