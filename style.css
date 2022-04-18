@@ -8,42 +8,44 @@ body {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    background-image: url(/Background-blues-white.jpg);
+    justify-content: space-between;
+    flex-direction: column;
     background-size: cover;
     flex-shrink: 0;
-}   
+    
+   
+}
 
-
-.mainContainer { 
-    height: 768px; 
-    width: 768px;
-    display: flex;  
+.gameSection{
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+.controls{
+    height: auto;
+    width: 250px; 
+    margin-right:  50px;
+}
+.mainContainer { 
+    height: 520px; 
+    width: 520px;
+    display: flex;  
+    flex-direction: column;
     flex-wrap: wrap;
     margin: 0; 
     padding: 0; 
     background-color: white;
 }
 
-.controls{
-    height: 768px;
-    width: 250px; 
-    margin-right:  50px;
-}
+
 
 .square{
     border: 1px solid gray;
     flex-grow: 0 0 auto; 
     margin:0px; 
     background-color: white; 
+}
 
-}
-.squareBlack{ 
-    background-color: black;
-}
 .border{
     border: 1px solid gray;
     background-color: #0060ff;
@@ -90,18 +92,18 @@ button:hover{
   }
 }
 input {
-    background: #17759C;
+    background: #b7c4c9;
     border: 3px solid whitesmoke;
     text-align: center;
-    color: whitesmoke;
+    color: black;
     font-size: 1.5em;
     transition: padding 0.3s 0.2s ease;
     width: 240px
+    
 }
 input:hover {
       background: whitesmoke;
       border: 3px solid #17759C;
-      color: #17759C;
     }
 
 .colorBtn{
@@ -111,5 +113,23 @@ input:hover {
 .colorful {
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     color: black;
+    font-weight: bold;
+}
+.eraser{
+    background: white;
+    color: black;
+    font-weight: bold;
+    border-color: black;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.gitHubLogo {
+    margin-left: 10px;
+}
+#userName{
+
     font-weight: bold;
 }
