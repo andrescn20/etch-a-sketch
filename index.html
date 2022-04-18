@@ -10,29 +10,37 @@
 </head>
 
 <body>
-    <div class = 'controls'>
+
+    <header class = 'header'>Etch-a-sketch (WORK IN PROGRESS)</header>
+    <div class = 'gameSection'>
+        <div class = 'controls'>
         
-        <input id = 'size' placeholder="'64'"> </input>
-        <button id = 'generatorBtn'> Generate </button>
-        <button class = 'colorBtn' > Color Theme </button>
-        <button class = 'eraserBtn'> Eraser </button>
-        <div class = 'instructions'> 
-            <h3>Instructions</h3>
-            <list clas="steps">
-                <ol>Enter a number (max = 100).</ol>
-                <ol>Press 'Generate'.</ol>
-                <ol>Pass the mouse over the grid</ol>
-            </list>
-            <P>Press 'Generate' again to clear the grid or
-                 enter a new number to generate a new grid.</P>
-            <h4 class="color">Color Theme: Toggles between colorful and black. </h4>     
-            <h4 class ='border'>Border: Toggles the borders between squares</h4>
+            <input id = 'size' placeholder="Enter Desired Size"> </input>
+            <button id = 'generatorBtn'> Generate </button>
+            <button class = 'colorBtn' > Color Theme </button>
+            <button class = 'eraserBtn'> Eraser </button>
+            <div class = 'instructions'> 
+                <h3>Instructions</h3>
+                <list clas="steps">
+                    <ol>Enter a number (max = 100).</ol>
+                    <ol>Press 'Generate'.</ol>
+                    <ol>Pass the mouse over the grid</ol>
+                </list>
+                <P>Press 'Generate' again to clear the grid or
+                     enter a new number to generate a new grid.</P>
+                <p>Color Theme: Toggles between colorful and black. </p>     
+            </div>
         </div>
 
-    </div>
+        <div class = 'mainContainer'> <!--The Grid will be created here --> </div>
 
-    <div class = 'mainContainer'> </div>
-   
+    </div>
+    <footer class = 'footer'>
+        <p>Created by: <span id = 'userName'> andrescn20 </span> </p>
+        <img class = 'gitHubLogo' src = 'https://cdn1.iconfinder.com/data/icons/logotypes/32/github-48.png'>
+
+
+    </footer>
     
 </body>
 </html>
