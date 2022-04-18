@@ -96,7 +96,7 @@ function createSquares(gridSide){
 
     const squares = document.querySelectorAll('.square');
     squares.forEach ((square) => {
-    square.onmousemove= changeColor; 
+    square.onmouseenter= changeColor; 
     });
 
 
